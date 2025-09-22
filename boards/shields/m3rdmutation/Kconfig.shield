@@ -1,0 +1,2 @@
+config SHIELD_M3RDMUTATION
+    def_bool $(shields_list_contains,m3rdmutation)
