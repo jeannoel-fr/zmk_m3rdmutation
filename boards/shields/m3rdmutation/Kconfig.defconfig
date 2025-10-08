@@ -4,4 +4,6 @@ if SHIELD_M3RDMUTATION
 config ZMK_KEYBOARD_NAME
     default "m3rdmutation"
 
+CONFIG_ZMK_BATTERY_REPORTING=y
+
 endif
