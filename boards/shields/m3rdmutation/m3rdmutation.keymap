@@ -12,7 +12,6 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/status.h>
 
 #define NAV_L 1
 #define NUM_L 2
