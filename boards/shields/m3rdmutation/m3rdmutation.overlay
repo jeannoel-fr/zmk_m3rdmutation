@@ -3,27 +3,6 @@
 / {
 
 
-    leds {
-        compatible = "zmk,led";  
-        label = "leds";
-
-        status-led {
-            label = "status-led";
-            gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;  // P0.13 contrôle VCC des LEDs
-            default-state = "off";                 // Éteint à l'initialisation
-        };
-    };
-
-
-&keyboard {
-    bindings {
-        compatible = "zmk,bindings";
-        binding-1 {
-            bind = <&status-led>, "LED_TOGGLE", <>;
-        };
-    };
-};
-
 
     chosen {
         zmk,underglow = &led_strip;
