@@ -13,13 +13,34 @@
     mod_status_leds {
         compatible = "zmk,mod-status-leds";
 
-        // Définir la LED pour le verrouillage du Layer
-        // Nous allons lier l'état du LAYER ID 1 (votre layer Numeric, par exemple)
-        layer_mod_status {
+        // ------------------------------------------------------------------
+        // INDICATEUR DE STATUT POUR LE LAYER 1 (Layer Nav)
+        // ------------------------------------------------------------------
+        layer1_mod_status: layer1_mod_status {
             label = "Layer 1 Status";
-            layers = <1>;           // ID du layer à surveiller (0 est la base, 1 est Numeric)
-            led = <&led_strip 0>;   // L'index de la LED dans la bande (ici, la première LED)
-            color = <0x0000FF>;     // Couleur à afficher quand le layer est ACTIF (ici, Bleu)
+            layers = <1>;           // Surveille le Layer ID 1
+            led = <&led_strip 0>;   // Utilise la PREMIÈRE LED (Index 0)
+            color = <0x99CCFF>;     // Couleur : Bleu
+        };
+
+        // ------------------------------------------------------------------
+        // INDICATEUR DE STATUT POUR LE LAYER 2 (Layer Num)
+        // ------------------------------------------------------------------
+        layer2_mod_status: layer2_mod_status {
+            label = "Layer 2 Status";
+            layers = <2>;           // Surveille le Layer ID 2
+            led = <&led_strip 1>;   // Utilise la DEUXIÈME LED (Index 1)
+            color = <0x99CCFF>;     // Couleur : Bleu
+        };
+
+        // ------------------------------------------------------------------
+        // INDICATEUR DE STATUT POUR LE LAYER 3 (Layer Mouse)
+        // ------------------------------------------------------------------
+        layer3_mod_status: layer3_mod_status {
+            label = "Layer 3 Status";
+            layers = <3>;           // Surveille le Layer ID 3
+            led = <&led_strip 2>;   // Utilise la TROISIÈME LED (Index 2)
+            color = <0x99CCFF>;     // Couleur : Bleu
         };
     };
 
