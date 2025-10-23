@@ -42,6 +42,18 @@
             led = <&led_strip 2>;   // Utilise la TROISIÈME LED (Index 2)
             color = <0x99CCFF>;     // Couleur : Bleu
         };
+
+        // ------------------------------------------------------------------
+        // Alerte de batterie
+        // ------------------------------------------------------------------
+
+        battery_alert_led2: battery_alert_led2 {
+            type = "battery-status";
+            status = "critical";
+            led = <&led_strip 2>;
+            color = <0xFF0000>;
+            blink-interval-ms = <30000>;
+        };
     };
 
     default_transform: keymap_transform0 {
