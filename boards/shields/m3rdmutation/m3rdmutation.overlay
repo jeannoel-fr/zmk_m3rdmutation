@@ -10,6 +10,19 @@
         zmk,matrix-transform = &default_transform;
     };
 
+    mod_status_leds {
+        compatible = "zmk,mod-status-leds";
+
+        // Définir la LED pour le verrouillage du Layer
+        // Nous allons lier l'état du LAYER ID 1 (votre layer Numeric, par exemple)
+        layer_mod_status {
+            label = "Layer 1 Status";
+            layers = <1>;           // ID du layer à surveiller (0 est la base, 1 est Numeric)
+            led = <&led_strip 0>;   // L'index de la LED dans la bande (ici, la première LED)
+            color = <0x0000FF>;     // Couleur à afficher quand le layer est ACTIF (ici, Bleu)
+        };
+    };
+
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <7>; 
